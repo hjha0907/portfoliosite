@@ -1,20 +1,25 @@
 import React from 'react';
-import {Header} from'./components/header/Header';
-import {Nav} from'./components/nav/Nav';
-import {About} from'./components/about/Sbout';
-import {Skills} from'./components/skills/Skills';
-import {Contact} from'./components/contact/Contact';
-import {Footer} from'./components/footer/Footer';
+import {Header} from'./components/header/Header.jsx';
+import {About} from'./components/about/About.jsx';
+import {Skills} from'./components/skills/Skills.jsx';
+import {Contact} from'./components/contact/Contact.jsx';
+import {Footer} from'./components/footer/Footer.jsx';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import'./index.css';
+
 
 export const App = () => {
   return (
+    <Router>
     <div> 
         <Header />
-        <Nav />
-        <About />
-        <Skills />
-        <Contact />
+        <Routes>
+          <Route path='/about' element={<About />} />
+          <Route path='/skills' element={<Skills />} />
+          <Route path='/contact' element={<Contact />} />        
+        </Routes> 
         <Footer />
     </div>
+    </Router>
   )
 }
