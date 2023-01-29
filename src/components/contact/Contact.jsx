@@ -1,8 +1,7 @@
 import React from 'react'
 import './contact.css'
 
-
-export const contact = () => {
+export const Contact = () => {
   return (
     <div>contact</div>
   )

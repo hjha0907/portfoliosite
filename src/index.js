@@ -1,6 +1,6 @@
-import { ReactDOM } from 'react';
-import {App} from './App';
-import'./index.css';
+import { createRoot } from 'react-dom/client';
+import {App} from './App.jsx'
 
-ReactDOM.render(<App/>,document.querySelector("#root"))
-
+const container = document.getElementById('root');
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
+root.render(<App tab="home" />);
